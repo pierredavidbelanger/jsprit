@@ -77,7 +77,7 @@ public class SchrimpfAcceptance implements SolutionAcceptor, IterationStartsList
 				if(worst == null) worst = solutionInMemory;
 				else if(solutionInMemory.getCost() > worst.getCost()) worst = solutionInMemory;
 			}
-			if(newSolution.getCost() < worst.getCost() + threshold){
+			if(newSolution.getCost() + threshold < worst.getCost()){
 				solutions.remove(worst);
 				solutions.add(newSolution);
 				solutionAccepted = true;
